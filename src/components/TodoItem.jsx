@@ -17,7 +17,7 @@ const TodoItem = ({ todo, removeTodo, updateTodo }) => {
         {complete && <CheckIcon />}
       </button>
       <p className={`grow text-gray-600 dark:text-gray-300 ${complete && "line-through"}`}>{title}</p>
-      <button className="flex-none">
+      <button className="flex-none" onClick={() => removeTodo(id)}>
         <CrossIcons />
       </button>
     </article>
